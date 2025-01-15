@@ -1,79 +1,29 @@
-.container {
-    padding: 20px;
-}
-
 .backLink {
     display: inline-flex;
     align-items: center;
+    gap: 8px;
     margin-bottom: 20px;
     padding: 8px 16px;
-    color: #000;
+    color: #000000;
     text-decoration: none;
-    border: 1px solid #ccc;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid #ff6b08;
     border-radius: 4px;
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backLink:hover {
-    background-color: #f5f5f5;
+.backLink:hover,
+.backLink:focus {
+    color: #ffffff;
+    background-color: #ff6b08;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
 }
 
-.movieInfo {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 30px;
-}
+.backLink::before {
+    content: "\2190";
 
-.poster {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.details {
-    flex-grow: 1;
-}
-
-.details h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.details h3 {
-    margin: 20px 0 10px;
-    color: #333;
-}
-
-.details p {
-    color: #666;
-    line-height: 1.6;
-}
-
-.additional {
-    padding-top: 20px;
-    border-top: 1px solid #e0e0e0;
-}
-
-.additional h3 {
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.additional ul {
-    list-style: none;
-    padding: 0;
-}
-
-.additional li {
-    margin-bottom: 10px;
-}
-
-.additional a {
-    color: #ff6b08;
-    text-decoration: none;
-}
-
-.additional a:hover {
-    text-decoration: underline;
+    font-size: 18px;
 }

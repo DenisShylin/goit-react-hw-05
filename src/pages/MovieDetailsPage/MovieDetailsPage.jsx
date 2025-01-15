@@ -58,21 +58,29 @@ const MovieDetailsPage = () => {
 
       <div className={styles.additional}>
         <h3>Additional information</h3>
-        <ul>
+        <ul className={styles.additionalList}>
           <li>
-            <Link to="cast" state={{ from: backLinkHref }}>
+            <Link
+              to="cast"
+              state={{ from: backLinkHref }}
+              className={styles.additionalLink}
+            >
               Cast
             </Link>
           </li>
           <li>
-            <Link to="reviews" state={{ from: backLinkHref }}>
+            <Link
+              to="reviews"
+              state={{ from: backLinkHref }}
+              className={styles.additionalLink}
+            >
               Reviews
             </Link>
           </li>
         </ul>
       </div>
 
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading additional info...</div>}>
         <Outlet />
       </Suspense>
     </div>

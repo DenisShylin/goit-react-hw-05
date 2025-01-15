@@ -1,11 +1,10 @@
-// pages/HomePage/HomePage.jsx
 import { useState, useEffect } from "react";
 import { fetchTrendingMovies } from "../../services/api";
 import MovieList from "../../components/MovieList/MovieList";
 import styles from "./HomePage.module.css";
 
 const HomePage = () => {
-  const [movies, setMovies] = useState([]); // инициализируем пустым массивом
+  const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -15,7 +14,6 @@ const HomePage = () => {
         setIsLoading(true);
         const data = await fetchTrendingMovies();
         if (data) {
-          // добавляем проверку на наличие данных
           setMovies(data);
         }
       } catch (error) {
@@ -33,7 +31,7 @@ const HomePage = () => {
       <h1 className={styles.title}>Trending today</h1>
       {error && <div className={styles.error}>Error: {error}</div>}
       {isLoading && <div className={styles.loading}>Loading...</div>}
-      {!isLoading && !error && movies && movies.length > 0 ? ( // добавляем проверку на movies
+      {!isLoading && !error && movies && movies.length > 0 ? (
         <MovieList movies={movies} />
       ) : (
         !isLoading && !error && <div>No movies found</div>
