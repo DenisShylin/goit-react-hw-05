@@ -1,0 +1,28 @@
+.container {
+    padding: 40px;
+    text-align: center;
+}
+
+.title {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.text {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6b08;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover {
+    background-color: #e65100;
+}
